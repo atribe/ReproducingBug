@@ -16,6 +16,7 @@ import java.util.UUID;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ChildObject {
     private UUID id;
+    // Test passes if @JsonBackReference is removed.
     @JsonBackReference
     private ParentObject parentObject;
     private UUID componentId;

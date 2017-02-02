@@ -33,6 +33,7 @@ public class ParentObject {
     private LocalDateTime createDate;
     private String jsonString;
 
+    // Test passes if @JsonManagedReference is removed.
     @JsonManagedReference
     private List<ChildObject> childSet;
 
