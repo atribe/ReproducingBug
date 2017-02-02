@@ -1,0 +1,17 @@
+{
+  "companyName": "My Famke Company",
+  "companyLogoImageId": "29a8045e-3d10-4121-9f27-429aa74d00ad",
+  "productId": "ABC-0003",
+  "productName": "Engineering Test",
+  "recordNumber": "01",
+  "revisionNumber": "1.0",
+  "procedureId": "6e6f607e-fb3f-4750-8a0a-2b38220e3328",
+  "childSet": [
+		{
+			"title": "Child 1",
+			"componentId": "3f7debe1-cddc-4b66-b7a7-49249e0c9d3e",
+			"orderLabel": "1",
+			"orderNumber": 1
+		}
+  ]
+}

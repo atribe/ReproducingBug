@@ -1,0 +1,21 @@
+group 'com.atribe'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    // Using this version of Jackson the test fails.
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.6'
+//    // Using this version of Jackson the test passes.
+//    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.6.7'
+
+    compile "org.projectlombok:lombok:1.16.8"
+}
