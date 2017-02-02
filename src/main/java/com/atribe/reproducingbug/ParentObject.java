@@ -30,9 +30,7 @@ public class ParentObject {
     private UUID companyLogoImageId;
     private String recordNumber;
     private String revisionNumber;
-    @JacksonInject
     private LocalDateTime createDate;
-    @JacksonInject
     private String jsonString;
 
     @JsonManagedReference
@@ -42,23 +40,14 @@ public class ParentObject {
      * Converts from JSON to ParentObject.
      *
      * @param json the json string.
-     * @param createDate timestamp
      * @return ParentObject object from json
      * @throws IOException json processing exceptions
      */
-    public static ParentObject deserialize(final String json,
-                                           final LocalDateTime createDate) throws IOException {
-
-        InjectableValues inject = new InjectableValues.Std()
-                .addValue(LocalDateTime.class, createDate)
-                .addValue(String.class, json);
+    public static ParentObject deserialize(final String json) throws IOException {
 
         ObjectMapper mapper = new ObjectMapper();
 
-        ParentObject parentObject = mapper
-                .reader(inject)
-                .forType(ParentObject.class)
-                .readValue(json);
+        ParentObject parentObject = mapper.readValue(json, ParentObject.class);
 
         return parentObject;
     }

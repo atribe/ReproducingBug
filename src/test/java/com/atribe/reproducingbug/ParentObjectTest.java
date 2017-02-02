@@ -16,9 +16,7 @@ public class ParentObjectTest {
 
         String testJson = new String(Files.readAllBytes(file.toPath()));
 
-        ParentObject parentObject = ParentObject.deserialize(
-                testJson,
-                LocalDateTime.now());
+        ParentObject parentObject = ParentObject.deserialize(testJson);
 
         assertNotNull(parentObject.getChildSet().get(0));
     }
