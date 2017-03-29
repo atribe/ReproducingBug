@@ -1,9 +1,7 @@
 package com.atribe.reproducingbug;
 
-import com.fasterxml.jackson.annotation.JacksonInject;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.databind.InjectableValues;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -33,7 +31,6 @@ public class ParentObject {
     private LocalDateTime createDate;
     private String jsonString;
 
-    // Test passes if @JsonManagedReference is removed.
     @JsonManagedReference
     private List<ChildObject> childSet;
 
@@ -52,5 +49,4 @@ public class ParentObject {
 
         return parentObject;
     }
-
 }

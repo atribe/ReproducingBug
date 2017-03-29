@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import java.io.File;
 import java.nio.file.Files;
-import java.time.LocalDateTime;
 
 import static org.junit.Assert.assertNotNull;
 
