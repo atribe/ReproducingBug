@@ -16,6 +16,4 @@ dependencies {
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.6'
 //    // Using this version of Jackson the test passes.
 //    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.6.7'
-
-    compile "org.projectlombok:lombok:1.16.8"
 }
